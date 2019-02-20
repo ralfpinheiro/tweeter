@@ -2,7 +2,7 @@
   padding: 0.3em 1.5em 1em 1.4em;
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(238, 237, 237);
+  background-color: rgb(223, 223, 223);
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
@@ -83,12 +83,11 @@ input:hover {
 }
 
 #tweets-feed article {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(223, 223, 223);
   padding: 1.5em 1.5em 1.3em 1.3em;
   height: auto;
   width: 100%;
   margin-top: 30px;
-  /* margin: 0 auto; */
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid transparent;
@@ -122,14 +121,14 @@ input:hover {
   float: left;
   max-width: 70px;
   border-radius: 50%;
-  margin-top: 15px;
-  margin-left: 15px;
+  margin-top: 18px;
+  margin-left: 18px;
 }
 
 #tweets-feed header h3 {
   float: left;
-  padding-left: 13px;
-  line-height: 2.55em;
+  padding-left: 10px;
+  line-height: 2.45em;
   font-size: 1.35em;
 }
 
@@ -143,12 +142,12 @@ input:hover {
 #tweets-feed .tweet-body {
   background-color: #fff;
   height: auto;
-  padding: 15px 20px 15px 20px;
+  padding: 25px 25px 25px 25px;
 }
 
 #tweets-feed footer {
-  border-top: 1px solid #ccc;
-  max-width: 464px;
+  border-top: 1px solid rgb(194, 194, 194);
+  max-width: 463px;
   height: 55px;
   padding: 5px 15px 0px 20px;
   background-color: #fff;
@@ -169,8 +168,8 @@ input:hover {
   float: right;
   max-width: 120px;
   position: relative;
-  top: -35px;
-  right: -41px;
+  top: -42px;
+  right: -30px;
   opacity: 0;
   transition: all 0.2s;
 }
@@ -180,7 +179,7 @@ input:hover {
   max-width: 98%;
   height: auto;
   width: 16%;
-  margin: 1.5%;
+  margin: 3%;
   cursor: pointer;
 }
 
