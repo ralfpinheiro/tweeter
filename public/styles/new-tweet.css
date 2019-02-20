@@ -83,6 +83,7 @@ input:hover {
 }
 
 #tweets-feed article {
+  overflow-wrap: break-word;
   background-color: rgb(223, 223, 223);
   padding: 1.5em 1.5em 1.3em 1.3em;
   height: auto;
