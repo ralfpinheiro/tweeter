@@ -1,0 +1,240 @@
+.new-tweet {
+  padding: 0.3em 1.5em 1em 1.4em;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(238, 237, 237);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 5px;
+  font-size: 2.2em;
+}
+
+h2 {
+  max-width: 100%;
+  padding-bottom: 10px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+textarea {
+  color: #606060;
+  padding: 12px;
+  width: 100%;
+  height: 120px;
+  margin: 0 auto;
+  border-color: #d5d5d5;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+textarea::placeholder {
+  background-image: -webkit-linear-gradient(92deg, hsl(6, 90%, 55%), #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 3s infinite linear;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  padding-top: 35px;
+  width: 100%;
+  text-align: center;
+}
+
+textarea:focus::placeholder {
+  opacity: 0.3;
+  transform: scale(0.85);
+}
+
+/* tweet button */
+input {
+  width: 100px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #ef7a56;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* tweet button */
+input:hover {
+  letter-spacing: 2.5px;
+}
+
+.counter {
+  font-size: 0.9em;
+  padding-top: 10px;
+  float: right;
+  padding-right: 25px;
+  opacity: 0.75;
+  color: #244751;
+}
+
+.error {
+  color: #ef7a56;
+}
+
+#tweets-feed {
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+#tweets-feed article {
+  background-color: rgb(230, 230, 230);
+  padding: 1.5em 1.5em 1.3em 1.3em;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  opacity: 0.7;
+  transition: opacity 0.1s;
+  z-index: 2;
+}
+
+#tweets-feed article * {
+  opacity: 0.8;
+}
+
+#tweets-feed article:hover .social-icons {
+  visibility: hidden;
+}
+
+#tweets-feed article:hover * {
+  /* border: 1px solid #ccc; */
+  opacity: 1;
+}
+
+#tweets-feed article:hover .social-icons {
+  visibility: visible;
+}
+
+.tweet-wrapper {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#tweets-feed header {
+  background-color: #f1f1f1;
+  height: 100px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+#tweets-feed header img {
+  float: left;
+  max-width: 70px;
+  border-radius: 50%;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#tweets-feed header h3 {
+  float: left;
+  padding-left: 13px;
+  line-height: 2.55em;
+  font-size: 1.35em;
+}
+
+#tweets-feed header p {
+  float: right;
+  padding-right: 20px;
+  padding-top: 18px;
+  opacity: 0.65;
+}
+
+#tweets-feed .tweet-body {
+  background-color: #fff;
+  height: auto;
+  padding: 15px 20px 15px 20px;
+}
+
+#tweets-feed footer {
+  border-top: 1px solid #ccc;
+  max-width: 464px;
+  height: 55px;
+  padding: 5px 15px 0px 20px;
+  background-color: #fff;
+  position: relative;
+  top: -3px;
+  text-align: left;
+}
+
+#tweets-feed footer p {
+  opacity: 0.7;
+  font-size: 0.9em;
+  color: #244751;
+}
+
+#tweets-feed .social-icons {
+  float: right;
+  max-width: 120px;
+  position: relative;
+  top: -35px;
+  right: -41px;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+#tweets-feed .social-icons img {
+  display: inline-block;
+  max-width: 98%;
+  height: auto;
+  width: 16%;
+  margin: 1.5%;
+  cursor: pointer;
+}
+
+#tweets-feed .social-icons img:last-child {
+  width: 22%;
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 860px) {
+  .new-tweet {
+    padding: 0.2em 1.2em 1em 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    margin-top: 5px;
+    font-size: 2em;
+  }
+
+  textarea::placeholder {
+    font-size: 1em;
+  }
+
+  #tweets-feed header p {
+    float: none;
+    position: relative;
+    top: 48px;
+    left: -100px;
+    opacity: 0.65;
+  }
+
+  #tweets-feed footer {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #tweets-feed header p {
+    float: none;
+    position: relative;
+    top: -37px;
+    left: 36%;
+    opacity: 0.65;
+  }
+}
