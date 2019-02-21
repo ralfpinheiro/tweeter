@@ -8,10 +8,16 @@
   bottom: 0;
   right: 0;
   display:none;
+  z-index: 5;
+}
+
+.tweet-wrapper {
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+
 }
 
 .error-box {
-  width:400px;
+  width:370px;
   height:220px;
   background-color: #f9f9f9;
   border-radius:5px;
@@ -26,19 +32,21 @@
 
 .message {
   color:#244751;
-  font-size:1.4em;
+  font-size:1.3em;
   text-align:center;
+  margin-top:18px;
+  margin-bottom:21px;
 }
 
 .error-button {
   width: 100px;
   font-size: 1.2em;
-  margin-top: 6px;
+  margin-top: 0px;
   padding: 15px;
   border-radius: 5px;
   border-width:0px;
  position:absolute;
- left:150px;
+ left:135px;
   color: #fff;
   background-color: #ef7a56;
   cursor: pointer;
@@ -46,12 +54,15 @@
 }
 
 .error-message h2 {
+  margin-top:10px;
+  margin-bottom:5px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  font-size:1.7em;
   color: #ef7a56;
   font-weight:700;
   text-align:center;
   padding-top:15px;
 }
-
 
 .new-tweet {
   padding: 0.3em 1.5em 1em 1.4em;
@@ -203,8 +214,8 @@ input:hover {
 }
 
 #tweets-feed footer {
-  border-top: 1px solid rgb(194, 194, 194);
-  max-width: 463px;
+  border-top: 1px solid #ef7a565d;
+  max-width: 463.5px;
   height: 55px;
   padding: 5px 15px 0px 20px;
   background-color: #fff;

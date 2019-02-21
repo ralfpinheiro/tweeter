@@ -22,6 +22,7 @@ $(document).ready(function() {
     let datePosted = tweet.created_at;
 // Build each HTML tag for new tweet
     let $article = $("<article>");
+    let $wrapper = $("<div>").addClass("tweet-wrapper");
     let $header = $("<header>").addClass("tweet-header");
     let $avatarImg = $("<img/>").attr("src", avatar);
     let $userName = $("<h3>").addClass("user-name").text(userName);
@@ -34,7 +35,8 @@ $(document).ready(function() {
     let $icon2 = $("<img>");
     let $icon3 = $("<img>");
 // Append HTML tags to its respective parent tag
-    $article.append($header);
+    $article.append($wrapper);
+    $wrapper.append($header);
     $header.append($avatarImg);
     $header.append($userName);
     $header.append($userTag);
@@ -53,7 +55,6 @@ $(document).ready(function() {
 
     return $article;
   }
-
   // Handles the AJAX - GET Request and render the Tweets on success
 function loadTweets(url) {
     $.ajax({
@@ -65,14 +66,15 @@ function loadTweets(url) {
     });
   }
 
+  loadTweets("/tweets");
+
+// Hides overlayed error message when user clicks
   $('.error-button').on('click', function(){
     $('.error-message').hide(); 
   });
   $('.error-message').on('click', function(){
     $('.error-message').hide(); 
   });
-
-
 // Handle the AJAX - POST Request
 $("#tweet-form").on('submit', function(event) {
     event.preventDefault();
@@ -82,11 +84,10 @@ $("#tweet-form").on('submit', function(event) {
         });  
     }  else if ($('textarea').val().length > 140) {
         $(".error-message").toggle( "fast", function() {
-            $('.message').text('Please make your Tweet shorter!');
+            $('.message').text('That is too long buddy...');
         }); 
-     } else {
-
-    $.ajax({
+     } else { 
+       $.ajax({
         type: "POST",
         url:'/tweets',
         data: $('#tweet-form').serialize(),
@@ -102,6 +103,5 @@ $("#tweet-form").on('submit', function(event) {
       console.log('POST request sent')
     }
 });
-
 });
 
