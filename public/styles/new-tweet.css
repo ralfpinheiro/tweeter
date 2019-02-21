@@ -1,3 +1,58 @@
+.error-message {
+  width:100vw;
+  height:100vh;
+  background-color: rgba(0,0,0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display:none;
+}
+
+.error-box {
+  width:400px;
+  height:220px;
+  background-color: #f9f9f9;
+  border-radius:5px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.message {
+  color:#244751;
+  font-size:1.4em;
+  text-align:center;
+}
+
+.error-button {
+  width: 100px;
+  font-size: 1.2em;
+  margin-top: 6px;
+  padding: 15px;
+  border-radius: 5px;
+  border-width:0px;
+ position:absolute;
+ left:150px;
+  color: #fff;
+  background-color: #ef7a56;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.error-message h2 {
+  color: #ef7a56;
+  font-weight:700;
+  text-align:center;
+  padding-top:15px;
+}
+
+
 .new-tweet {
   padding: 0.3em 1.5em 1em 1.4em;
   width: 100%;
@@ -5,6 +60,7 @@
   background-color: rgb(223, 223, 223);
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  display:none;
 }
 
 h1 {
@@ -57,7 +113,7 @@ input {
   color: #fff;
   background-color: #ef7a56;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 /* tweet button */

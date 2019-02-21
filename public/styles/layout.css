@@ -22,7 +22,8 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-main {
+
+ main {
   position: relative;
   top: 130px;
   width: 600px;

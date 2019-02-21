@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    $( ".compose" ).click(function() {
+        $(".new-tweet").toggle( "fast", function() {
+            $('textarea').focus();
+        });
+      });
 // Loops through DB and pull data from each tweet to create and prepend them
   function renderTweets(tweets) {
     tweets.forEach(tweet => {
@@ -60,15 +65,26 @@ function loadTweets(url) {
     });
   }
 
+  $('.error-button').on('click', function(){
+    $('.error-message').hide(); 
+  });
+  $('.error-message').on('click', function(){
+    $('.error-message').hide(); 
+  });
+
+
 // Handle the AJAX - POST Request
 $("#tweet-form").on('submit', function(event) {
     event.preventDefault();
-
     if ($('textarea').val() === '') {
-        alert('Please write your Tweet!');
+        $(".error-message").toggle( "fast", function() {
+            $('.message').text('You Tweet is empty!');
+        });  
     }  else if ($('textarea').val().length > 140) {
-        alert('Exceeded max character length, please re-write your Tweet.');
-    } else {
+        $(".error-message").toggle( "fast", function() {
+            $('.message').text('Please make your Tweet shorter!');
+        }); 
+     } else {
 
     $.ajax({
         type: "POST",
@@ -77,6 +93,7 @@ $("#tweet-form").on('submit', function(event) {
         success: function(tweets) {
             $('textarea').val('');
             $('#tweets-feed').empty();
+            $('.counter').text(140);
             loadTweets('/tweets');        },
         error: function() {
             alert('Bad Tweet!');
