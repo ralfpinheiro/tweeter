@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  // Page load fade transition
+  $("body.hidden")
+    .fadeIn(1500)
+    .removeClass("hidden");
+
+  // "Compose" button trigger
   $(".compose").click(function() {
     $(".new-tweet").toggle("fast", function() {
       $("textarea").focus();
@@ -8,6 +14,10 @@ $(document).ready(function() {
   function renderTweets(tweets) {
     tweets.forEach(tweet => {
       let $tweet = createTweetElement(tweet);
+      $tweet
+        .addClass("hidden")
+        .fadeIn(300)
+        .removeClass("hidden");
       $("#tweets-feed").prepend($tweet);
     });
   }
@@ -37,7 +47,10 @@ $(document).ready(function() {
     let $icon1 = $("<img>");
     let $icon2 = $("<img>");
     let $icon3 = $("<img>");
-    // Append HTML tags to its respective parent tag
+    let $delete = $(
+      `<form class="del"><button id="${tweet.id}" type="submit"><i class="far fa-trash-alt" /></button></form>;`
+    );
+    // Append HTML tags to their respective parent
     $article.append($wrapper);
     $wrapper.append($header);
     $header.append($avatarImg);
@@ -50,15 +63,16 @@ $(document).ready(function() {
     $socialIcons.append($icon1);
     $socialIcons.append($icon2);
     $socialIcons.append($icon3);
-    $icon1.attr("src", "/images/flag.png");
+    $socialIcons.append($delete);
+    $icon1.attr("src", "/images/heart.png");
     $icon2.attr("src", "/images/refresh.png");
-    $icon3.attr("src", "/images/heart.png");
+    $icon3.attr("src", "/images/flag.png");
     let convertDate = new Date(datePosted);
     $datePosted.text(convertDate.toDateString());
 
     return $article;
   }
-  // Handles the AJAX - GET Request and render the Tweets on success
+  // Handles the AJAX - GET Request and renders the Tweets on success
   function loadTweets(url) {
     $.ajax({
       url: url,
@@ -70,6 +84,23 @@ $(document).ready(function() {
   }
 
   loadTweets("/tweets");
+
+  //Delete button functionality.
+  $("#tweets-feed").on("submit", function(event) {
+    event.preventDefault();
+    let form = event.target;
+    let id = $(form)
+      .children()
+      .attr("id");
+    $.ajax({
+      method: "DELETE",
+      url: "/tweets/" + id,
+      success: function(tweets) {
+        $("#tweets-feed").empty();
+        loadTweets("/tweets");
+      }
+    });
+  });
 
   // Hides overlayed error message when user clicks
   $(".error-button").on("click", function() {

@@ -24,25 +24,30 @@
     <!-- Char Count -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Header Behaviour -->
-    <script type="text/javascript" src="/scripts/header-behaviour.js"></script>
+    <!-- External icon library -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
-  <body>
+  <body class="hidden">
     <nav id="nav-bar">
       <section class="nav-wrapper">
-        <img class="logo" src="/images/bird.png" width="60px" height="60px" />
-        <span class="header">Tweeter</span>
+        <img class="logo" src="/images/bird.svg" width="52px" height="52px" />
+        <span class="header">Tweetfy</span>
       </section>
       <section class="user-nav">
         <a class="compose" href="#">Compose</a>
       </section>
     </nav>
     <main class="container">
-      <h1>Tweets</h1>
+      <h1 style="text-align:center;">Welcome to Tweetfy</h1>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="tweet-form" method="POST" action="/tweets/">
@@ -58,8 +63,8 @@
           </div>
         </aside>
       </section>
+      <!-- Tweets will be shown here-->
       <section id="tweets-feed"></section>
     </main>
-    <footer id="page-footer"><p>Hand-coded by Ralf Pinheiro</p></footer>
   </body>
 </html>
