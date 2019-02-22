@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <!-- External Font -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900" rel="stylesheet" />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -24,19 +24,20 @@
     <!-- Char Count -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+    <!-- Header Behaviour -->
+    <script type="text/javascript" src="/scripts/header-behaviour.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <section class="nav-wrapper">
         <img class="logo" src="/images/bird.png" width="60px" height="60px" />
         <span class="header">Tweeter</span>
       </section>
       <section class="user-nav">
-        <!-- <a class="login" href="#">Login</a> -->
         <a class="compose" href="#">Compose</a>
       </section>
     </nav>
@@ -51,14 +52,14 @@
         </form>
         <aside class="error-message">
           <div class="error-box">
-          <h2>Ooops!</h2>
-          <p class="message"></p>
-          <input class="error-button" type="submit" value="Go it!">
+            <h2>Ooops!</h2>
+            <p class="message"></p>
+            <input class="error-button" type="submit" value="Go it!" />
           </div>
-          </aside>
+        </aside>
       </section>
-      <section id="tweets-feed">
-      </section>
+      <section id="tweets-feed"></section>
     </main>
+    <footer id="page-footer"><p>Hand-coded by Ralf Pinheiro</p></footer>
   </body>
 </html>
