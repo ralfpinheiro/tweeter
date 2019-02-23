@@ -117,7 +117,7 @@ $(document).ready(function() {
         $(".message").text("You Tweet is empty!");
       });
     } else if ($("textarea").val().length > 140) {
-      $(".error-message").fadetToggle("fast", function() {
+      $(".error-message").fadeToggle("fast", function() {
         $(".message").text("That is too long buddy...");
       });
     } else {
