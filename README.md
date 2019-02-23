@@ -12,11 +12,11 @@ Tweeter single-page Twitter clone that allows users to post a tweet-like comment
 
 ## Screenshots
 
-![alt text](screenshot1.png "Homepage")
+![alt text](/public/images/screenshot1.png "Homepage")
 
-![alt text](screenshot2.png "Compose")
+![alt text](/public/images/screenshot2.png "Compose")
 
-![alt text](screenshot3 "Tweets")
+![alt text](/public/images/screenshot3 "Tweets")
 
 ## Getting Started
 
