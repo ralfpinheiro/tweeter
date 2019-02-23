@@ -2,6 +2,22 @@
 
 Tweeter single-page Twitter clone that allows users to post a tweet-like comment within the app feed.
 
+## Features
+
+- Responsive Web App (Using CSS media queries for an optimum performance across all devices)
+- Persistent database (MongoDb)
+- Delete button
+- Toogle Compose button
+- Elements micro-animation
+
+## Screenshots
+
+![alt text](screenshot1.png "Homepage")
+
+![alt text](screenshot2.png "Compose")
+
+![alt text](screenshot3 "Tweets")
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
@@ -24,6 +40,7 @@ Single-page app that allows users post a tweet-like comment. User names and tags
 - MongoDB
 - Chance
 - Md5
+- escapeHTML
 
 ### Dev Dependencies
 
