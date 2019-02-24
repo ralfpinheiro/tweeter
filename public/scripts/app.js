@@ -13,7 +13,7 @@ $(document).ready(function() {
   // Loops through DB and pull data from each tweet to create and prepend them
   function renderTweets(tweets) {
     tweets.forEach(tweet => {
-      let $tweet = createTweetElement(tweet);
+      const $tweet = createTweetElement(tweet);
       $tweet
         .addClass("hidden")
         .fadeIn(300)
@@ -24,30 +24,30 @@ $(document).ready(function() {
   // Creates HTML structure for the new tweet
   function createTweetElement(tweet) {
     // Pull tweet data from DB structure
-    let userName = tweet.user.name;
-    let avatar = tweet.user.avatars.small;
-    let userTag = tweet.user.handle;
-    let userText = tweet.content.text;
-    let datePosted = tweet.created_at;
+    const userName = tweet.user.name;
+    const avatar = tweet.user.avatars.small;
+    const userTag = tweet.user.handle;
+    const userText = tweet.content.text;
+    const datePosted = tweet.created_at;
     // Build each HTML tag for new tweet
-    let $article = $("<article>");
-    let $wrapper = $("<div>").addClass("tweet-wrapper");
-    let $header = $("<header>").addClass("tweet-header");
-    let $avatarImg = $("<img/>").attr("src", avatar);
-    let $userName = $("<h3>")
+    const $article = $("<article>");
+    const $wrapper = $("<div>").addClass("tweet-wrapper");
+    const $header = $("<header>").addClass("tweet-header");
+    const $avatarImg = $("<img/>").attr("src", avatar);
+    const $userName = $("<h3>")
       .addClass("user-name")
       .text(userName);
-    let $userTag = $("<p>").text(userTag);
-    let $tweetBody = $("<aside>")
+    const $userTag = $("<p>").text(userTag);
+    const $tweetBody = $("<aside>")
       .addClass("tweet-body")
       .text(userText);
-    let $footer = $("<footer>");
-    let $datePosted = $("<p>").text(datePosted);
-    let $socialIcons = $("<div>").addClass("social-icons");
-    let $icon1 = $("<img>");
-    let $icon2 = $("<img>");
-    let $icon3 = $("<img>");
-    let $delete = $(
+    const $footer = $("<footer>");
+    const $datePosted = $("<p>").text(datePosted);
+    const $socialIcons = $("<div>").addClass("social-icons");
+    const $icon1 = $("<img>");
+    const $icon2 = $("<img>");
+    const $icon3 = $("<img>");
+    const $delete = $(
       `<form class="del"><button id="${tweet.id}" type="submit"><i class="far fa-trash-alt" /></button></form>;`
     );
     // Append HTML tags to their respective parent
@@ -67,7 +67,7 @@ $(document).ready(function() {
     $icon1.attr("src", "/images/heart.png");
     $icon2.attr("src", "/images/refresh.png");
     $icon3.attr("src", "/images/flag.png");
-    let convertDate = new Date(datePosted);
+    const convertDate = new Date(datePosted);
     $datePosted.text(convertDate.toDateString());
 
     return $article;
@@ -88,8 +88,8 @@ $(document).ready(function() {
   //Delete button functionality.
   $("#tweets-feed").on("submit", function(event) {
     event.preventDefault();
-    let form = event.target;
-    let id = $(form)
+    const form = event.target;
+    const id = $(form)
       .children()
       .attr("id");
     $.ajax({
