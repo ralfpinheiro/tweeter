@@ -2,7 +2,7 @@
 
 Tweeter single-page Twitter clone that allows users to post a tweet-like comment within the app feed.
 
-live prototype at: [tweetfy.herokuapp.com/](https://tweetfy.herokuapp.com/)
+🔗 Live prototype at: [ tweetfy.herokuapp.com/](https://tweetfy.herokuapp.com/)
 
 ## Features
 
