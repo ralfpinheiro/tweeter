@@ -86,6 +86,7 @@ h2 {
 }
 
 textarea {
+  max-width: 100%;
   color: #606060;
   padding: 12px;
   width: 100%;
