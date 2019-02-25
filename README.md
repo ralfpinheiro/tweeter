@@ -4,6 +4,9 @@ Tweeter single-page Twitter clone that allows users to post a tweet-like comment
 
 🔗 Live prototype at: [ tweetfy.herokuapp.com/](https://tweetfy.herokuapp.com/)
 
+- Note: For local testing, you might set up an ".env" file and add following line to it:
+` MONGODB_URI= "mongodb://localhost:27017/tweeter" `
+
 ## Features
 
 - Responsive Web App (Using CSS media queries for an optimum performance across all devices)
