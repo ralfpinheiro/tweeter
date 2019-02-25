@@ -126,13 +126,6 @@ input {
 }
 
 /* tweet button */
-input:hover {
-  letter-spacing: 2.5px;
-}
-
-iput:active {
-  outline: 0;
-}
 
 .counter {
   font-size: 0.9em;
